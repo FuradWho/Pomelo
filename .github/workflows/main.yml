@@ -1,0 +1,23 @@
+name: Build and Test
+
+on:
+  push:
+    branches:
+      - master
+  pull_request:
+
+jobs:
+  
+  build:
+    runs-on: ubuntu-latest
+    steps: 
+    - uses: actions/checkout@v2
+    
+    - name: Set up Go
+      uses: actions/setup-go@v2 # 虚拟环境搭建go环境
+      with:
+        go-version: 1.16 #指定1.16版本
+    
+    - name: Build
+      run: go build -o microblog #在虚拟环境编译microblog应用
+  
