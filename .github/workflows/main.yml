@@ -19,5 +19,5 @@ jobs:
         go-version: 1.16 #指定1.16版本
     
     - name: Build
-      run: go build -o microblog #在虚拟环境编译microblog应用
+      run: cd .\github-actions\ && go build -o main #在虚拟环境编译microblog应用
   
