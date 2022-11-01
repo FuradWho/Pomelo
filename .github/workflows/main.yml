@@ -22,5 +22,5 @@ jobs:
       run: cd ./github-actions && go build -o main #在虚拟环境编译microblog应用
       
     - name: Test
-      run: go test ./hello
+      run: cd ./github-actions &&  go test ./hello
   
